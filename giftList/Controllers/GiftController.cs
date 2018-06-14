@@ -22,13 +22,14 @@ namespace giftList.Controllers
                 new Wisher {Name = "Wisher 2"}
             };
 
-            var viewResult = new RandomGiftViewModel
+            var viewModel = new RandomGiftViewModel
             {
                 Gift = gift,
                 Wishers = wishers
             };
            
-            return View(gift);
+            return View(viewModel);
+
             //return Content("Hello World");
         }
        // [Route("gift/released/{year}/{month: regex(\\d{4}): range(1, 12)}")]
