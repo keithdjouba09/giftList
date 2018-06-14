@@ -24,8 +24,9 @@ namespace giftList.Controllers
 
             var viewResult = new RandomGiftViewModel
             {
-
-            }
+                Gift = gift,
+                Wishers = wishers
+            };
            
             return View(gift);
             //return Content("Hello World");
