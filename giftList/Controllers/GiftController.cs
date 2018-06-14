@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using giftList.Models;
+using giftList.ViewModels;
+
 
 namespace giftList.Controllers
 {
@@ -14,7 +16,16 @@ namespace giftList.Controllers
         {
             var gift = new Gift() { Name = "Disney Doll"};
 
-            var viewResult = new ViewResult();
+            var wishers = new List<Wisher>
+            {
+                new Wisher {Name = "Wisher 1 "},
+                new Wisher {Name = "Wisher 2"}
+            };
+
+            var viewResult = new RandomGiftViewModel
+            {
+
+            }
            
             return View(gift);
             //return Content("Hello World");
