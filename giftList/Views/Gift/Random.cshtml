@@ -1,8 +1,26 @@
-﻿@Model giftList.Models.RandomGiftViewModel
+﻿@Model giftList.ViewModels.RandomGiftViewModel
+
 @{
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@{ 
+    var className = Model.Wishers.Count > 0 ? "popular" : null;
+}
 
-<h2>@ViewData</h2>
+<h2 class=" @className">@Model.Gift.Name</h2>
+@if (Model.Wishers.Count == 0)
+{
+    <p>Nobady hasn't wish for it yet. be The First!</p>
+}
+else
+{
+    <u>
+        @foreach (var wisher in Model.Wishers)
+        {
+            <li>@wisher.Name</li>
+        }
+    </u>
+}
+
 

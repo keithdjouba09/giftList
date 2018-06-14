@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using giftList.Models;
+using giftList.ViewModels;
 
 namespace giftList.ViewModels
 {
